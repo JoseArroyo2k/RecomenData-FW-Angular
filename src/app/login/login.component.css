@@ -1,0 +1,77 @@
+/* src/app/login/login.component.css */
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/assets/fondo.png'); /* Ajusta la ruta si es necesario */
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Agrega esta línea */
+}
+
+.login-form {
+  background-color: rgba(255, 255, 240, 0.9); /* Color crema */
+  padding: 30px; /* Aumenta el padding para hacerlo más grande */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px; /* Ajusta el ancho */
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #a52a2a; /* Color rojo oscuro */
+  font-size: 28px; /* Aumenta el tamaño del texto */
+  line-height: 1.2; /* Ajusta la altura de la línea */
+}
+
+.login-form .form-group {
+  margin-bottom: 15px;
+}
+
+.login-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #a52a2a; /* Color rojo oscuro */
+  font-size: 18px; /* Aumenta el tamaño del texto */
+}
+
+.login-form .form-group input {
+  width: 100%;
+  padding: 10px; /* Aumenta el padding para hacerlo más grande */
+  box-sizing: border-box;
+  border: 1px solid #a52a2a; /* Color rojo oscuro */
+  border-radius: 5px;
+  background-color: #fffaf0; /* Color crema claro */
+  font-size: 16px; /* Aumenta el tamaño del texto */
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px; /* Aumenta el padding para hacerlo más grande */
+  background-color: #a52a2a; /* Color rojo oscuro */
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px; /* Aumenta el tamaño del texto */
+}
+
+.login-form button:hover {
+  background-color: #800000; /* Color rojo más oscuro */
+}
+
+/* Position the logo */
+.logo-container {
+  position: absolute;
+  top: 20px; /* Ajusta esta línea según sea necesario */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo {
+  height: 150px; /* Ajusta la altura según sea necesario */
+  width: auto;
+}
