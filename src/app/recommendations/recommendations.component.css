@@ -1,8 +1,87 @@
 /* src/app/recommendations/recommendations.component.css */
 .recommendations-container {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
+  background-image: url('/assets/fondo.png'); /* Asegúrate de que la imagen de fondo esté en la carpeta de assets */
+  background-size: cover;
+  color: #000; /* Cambiar el color del texto a negro */
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000; /* Cambiar el color del texto a negro */
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header nav {
+  display: flex;
+  gap: 10px;
+}
+
+.header nav a {
+  background-color: #d9534f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.header nav a:hover {
+  background-color: #c9302c;
+}
+
+.recommendations {
+  margin-top: 20px;
+}
+
+.category {
+  margin-bottom: 20px;
+  background-color: #f5f5dc; /* Color crema */
+  border: 1px solid #000; /* Bordes negros */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.category h4 {
+  margin: 0;
+  font-size: 20px; /* Letras más grandes */
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  background-color: #f5f5dc; /* Color crema */
+  color: #000;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #000; /* Bordes negros */
+  border-radius: 5px;
+  width: calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.product p {
+  margin: 0;
+  font-size: 18px; /* Letras más grandes */
+}
+
+button {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #c9302c;
+}

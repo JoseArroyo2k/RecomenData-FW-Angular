@@ -22,6 +22,7 @@ export class LoginComponent {
       response => {
         console.log('LoginComponent: login successful', response);
         localStorage.setItem('token', response.token);
+        localStorage.setItem('username', this.username); // Guardar el nombre de usuario
         this.router.navigate(['/recommendations']);  // Redirigir al componente Recommendations
       },
       error => {
