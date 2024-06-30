@@ -1,24 +1,15 @@
-const sql = require('mssql');
+const mongoose = require('mongoose');
 
-const config = {
-  user: '', // Deja vacío para usar autenticación de Windows
-  password: '', // Deja vacío para usar autenticación de Windows
-  server: 'DESKTOP-I4S1736', // Tu servidor SQL
-  database: 'Recomendata PM', // Tu base de datos
-  options: {
-    trustedConnection: true, // Usar autenticación de Windows
-    enableArithAbort: true,
-    encrypt: false, // Cambiar a true si usas SSL
-  },
+const connectToDatabase = async () => {
+  try {
+    await mongoose.connect('mongodb+srv://josearroyo4567:<password>@cluster0.3cybaws.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log('Conexión a MongoDB Atlas establecida');
+  } catch (err) {
+    console.error('Error en la conexión a MongoDB: ', err);
+  }
 };
 
-async function connectToDatabase() {
-  try {
-    await sql.connect(config);
-    console.log('Conexión a la base de datos establecida');
-  } catch (err) {
-    console.error('Error en la conexión a la base de datos: ', err);
-  }
-}
-
-module.exports = { sql, connectToDatabase };
+module.exports = connectToDatabase;

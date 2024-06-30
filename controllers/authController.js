@@ -1,6 +1,6 @@
 const User = require('../models/User');
 
-exports.loginUser = async (req, res) => {
+exports.login = async (req, res) => {
   const { Usuario, Contrasena } = req.body;
 
   try {

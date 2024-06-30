@@ -1,54 +1,33 @@
 <!-- src/app/recommendations/recommendations.component.html -->
 <div class="recommendations-container">
-  <div class="header">
-    <h2>Bienvenido Usuario XYZ</h2>
-    <nav>
-      <a href="#">Mis compras</a>
-      <a href="#">Opiniones</a>
-      <a href="#">Notificaciones</a>
-      <a href="#">Configuración</a>
-    </nav>
-  </div>
-  <div class="recommendations">
-    <h3>Te puede interesar</h3>
-    <div class="category">
-      <h4>TODOS LOS PRODUCTOS MÁS LLAMATIVOS DE CATEGORIA 1</h4>
-      <p>(AFINIDAD MÁS ALTA)</p>
-      <!-- Espacio para los productos de la categoría 1 -->
-      <div class="products">
-        <div class="product">
-          <p>Producto a1</p>
-          <p>Precio pa1</p>
+  <div class="main-content">
+    <div class="recommendations">
+      <h3>Recommended for You</h3>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let product of products; index as idx">
+          <div class="card">
+            <img class="card-img-top" src="assets/Categorias/4.jpg" alt="Product Image">
+            <div class="card-body">
+              <h5 class="card-title">Product {{ idx + 1 }}</h5>
+              <p class="card-text">Code: <span>---</span></p>
+              <p class="card-text">Price: <span>---</span></p>
+              <button class="btn btn-primary">View More</button>
+            </div>
+          </div>
         </div>
-        <!-- Más productos -->
       </div>
-      <button>Ver más</button>
     </div>
-    <div class="category">
-      <h4>TODOS LOS PRODUCTOS MÁS LLAMATIVOS DE CATEGORIA 2</h4>
-      <p>(SEGUNDA AFINIDAD MÁS ALTA)</p>
-      <!-- Espacio para los productos de la categoría 2 -->
-      <div class="products">
-        <div class="product">
-          <p>Producto a2</p>
-          <p>Precio pa2</p>
-        </div>
-        <!-- Más productos -->
+    <div class="sidebar">
+      <div class="user-info">
+        <img class="user-image" src="assets/user.jpg" alt="User Image">
+        <h3>Welcome User XYZ</h3>
       </div>
-      <button>Ver más</button>
-    </div>
-    <div class="category">
-      <h4>TODOS LOS PRODUCTOS MÁS LLAMATIVOS DE CATEGORIA 3</h4>
-      <p>(TERCERA AFINIDAD MÁS ALTA)</p>
-      <!-- Espacio para los productos de la categoría 3 -->
-      <div class="products">
-        <div class="product">
-          <p>Producto a3</p>
-          <p>Precio pa3</p>
-        </div>
-        <!-- Más productos -->
-      </div>
-      <button>Ver más</button>
+      <nav class="nav flex-column">
+        <a class="nav-link" href="#">My Purchases</a>
+        <a class="nav-link" href="#">Reviews</a>
+        <a class="nav-link" href="#">Notifications</a>
+        <a class="nav-link" href="#">Settings</a>
+      </nav>
     </div>
   </div>
 </div>
